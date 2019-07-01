@@ -117,7 +117,7 @@ export default class Login extends Component {
                         onPress={() => this.belissimologin()} />
 
                     <Button
-                        title={'Login'}
+                        title={'Registro'}
                         style={styles.bot2}
                     />
                 </View>
