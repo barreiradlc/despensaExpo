@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import { } from 'react-native';
 import Carregando from './recursos/Carregando';
 import deviceStorage from './recursos/deviceStorage';
-import Login from './telas/login';
+
+// import Login from './telas/login';
+// import Login from './telas/login';
+
+import Rotas from './recursos/rotas';
 
 export default class App extends Component {
   constructor() {
@@ -25,7 +29,7 @@ export default class App extends Component {
       );
     } else {
       return (
-        <Login />
+        <Rotas />
       );
     }
 

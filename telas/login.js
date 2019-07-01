@@ -9,10 +9,13 @@ import {
     View,
     StyleSheet,
     AsyncStorage,
-    TouchableOpacity
+    TouchableOpacity,
+    ScrollView
 } from 'react-native';
 import api from '../recursos/api';
 import { Icon } from 'react-native-elements'
+// import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';Z
+
 
 // import { StackActions, NavigationActions } from 'react-navigation';
 // import console = require('console');
@@ -21,6 +24,9 @@ var usuarioUsuario;
 var senhaUsuario;
 
 export default class Login extends Component {
+    static navigationOptions = {
+        header: null,
+    };
 
 
 
@@ -89,7 +95,10 @@ export default class Login extends Component {
         return (
 
             <View style={styles.container}>
+
+
                 <StatusBar barStyle="light-content" backgroundColor="#4D0016" />
+
                 <Image source={{ uri: 'https://facebook.github.io/react/logo-og.png' }}
                     style={styles.image}
                 />
@@ -119,6 +128,7 @@ export default class Login extends Component {
                     <Button
                         title={'Registro'}
                         style={styles.bot2}
+                        onPress={() => this.props.navigation.navigate('Registro')}
                     />
                 </View>
 
